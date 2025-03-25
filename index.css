@@ -2,15 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Styling Unit  */
-/* Body  */
+ /* Styling Unit   */
+ /* Body   */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-/*  Main Unit  */
+  /* Main Unit   */
 .main-container {
   height: auto;
   width: 100vw;
@@ -19,8 +19,8 @@ body {
   background-color: black;
 }
 
-/*  Home And Navigation Unit  */
-/* Home Container */
+  /* Home And Navigation Unit   */
+ /* Home Container  */
 .home {
   height: 100vh;
   width: 100vw;
@@ -33,7 +33,7 @@ body {
   z-index: 1;
 }
 
-/* Video Background */
+ /* Video Background  */
 .bg-video {
   transform: translate(0%, 0%);
   position: absolute;
@@ -42,7 +42,7 @@ body {
   opacity: 30%;
 }
 
-/* Navigation Unit */
+ /* Navigation Unit  */
 .navbar-name {
   height: 100%;
   width: 60%;
@@ -81,7 +81,7 @@ a {
   font-size: 1.55rem;
 }
 
-/* Home (name) Unit */
+ /* Home (name) Unit  */
 h1 {
   font-size: 6rem;
   margin-top: -5vh;
@@ -106,7 +106,7 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-/* Home (img) Unit */
+ /* Home (img) Unit  */
 .img-site {
   height: 100%;
   width: 40%;
@@ -117,7 +117,7 @@ h2 {
   width: 70%;
   background-color: #009dff;
   margin-left: 10%;
-  border-radius: 0 0 1.5rem 1.5rem;
+  border-radius: 0 0 0.9rem 0.9rem;
   overflow: hidden;
 }
 
@@ -127,7 +127,7 @@ h2 {
 }
 
 
-/*  About Unit  */
+  /* About Unit   */
 .about {
   height: 100vh;
   width: 100vw;
@@ -135,18 +135,18 @@ h2 {
   flex-direction: row;
 }
 
-/*  About (img) Unit  */
+  /* About (img) Unit   */
 .img-two {
   height: 80%;
   width: 80%;
   background-color: #009dff;
   margin-top: 15%;
   margin-left: 10%;
-  border-radius: 1.5rem;
+  border-radius: 0.9rem;
   overflow: hidden;
 }
 
-/*  About (introduction) Unit  */
+  /* About (introduction) Unit   */
 .intro {
   height: 100%;
   width: 60%;
@@ -167,7 +167,7 @@ h2 {
   font-size: 2rem;
   color: #f1f1f1;
   margin-left: 10%;
-  line-height: 1.5;
+  line-height: 0.9;
   text-align: left;
   max-width: 800px;
   margin-top: -1vh;
@@ -184,7 +184,7 @@ span {
   margin-bottom: 1rem;
 }
 
-/* About (skills) Unit  */
+ /* About (skills) Unit   */
 .skills {
   width: 80%;
   height: 4%;
@@ -196,7 +196,7 @@ span {
   margin-left: 8%;
 }
 
-/*  Html skill  */
+  /* Html skill   */
 .html {
   height: 100%;
   width: 95%;
@@ -204,7 +204,7 @@ span {
   border-radius: 4px;
 }
 
-/* Css skill  */
+ /* Css skill   */
 .css {
   height: 100%;
   width: 95%;
@@ -212,7 +212,7 @@ span {
   border-radius: 4px;
 }
 
-/*  JavaScript skill  */
+  /* JavaScript skill   */
 .js {
   height: 100%;
   width: 70%;
@@ -220,7 +220,7 @@ span {
   border-radius: 4px;
 }
 
-/*  React skill  */
+  /* React skill   */
 .react {
   height: 100%;
   width: 50%;
@@ -228,18 +228,18 @@ span {
   border-radius: 4px;
 }
 
-/*  Skill text  */
+  /* Skill text   */
 .html span,
 .css span,
 .js span,
 .react span {
   color: #f1f1f1;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   padding-bottom: 3px;
   cursor: default;
 }
 
-/*  Project Unit  */
+  /* Project Unit   */
 .project {
   height: 100vh;
   display: flex;
@@ -299,22 +299,22 @@ h5 {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 40%;
+  height: 100%;
 }
 
 .part-one {
-  height: auto;
-  width: 100%;
   display: flex;
   flex-direction: row;
+  height: 50%;
+  width: 100%;
   margin-top: -1%;
 }
 
 .part-two {
-  height: auto;
-  width: 100%;
   display: flex;
   flex-direction: row;
+  height: 50%;
+  width: 100%;
   margin-top: 3%;
 }
 
@@ -329,13 +329,110 @@ h5 {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  margin-left: 5%;
+  margin-left: 4%;
+  font-size: 2rem;
 }
 
 .project-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 15px #009dff;
 }
+
+.box-one {
+  animation: box-one 0.9s forwards;
+  position: relative;
+  }
+  
+  @keyframes box-one {
+    0% {
+      top: 0%;
+      left: 0;
+    }
+    100%{
+      top: 42vh;
+      left: 45.5vw;
+    }
+  }
+
+  .box-two {
+    animation: box-two 0.9s forwards;
+    position: relative;
+  }
+
+  @keyframes box-two {
+    0% {
+      top: 0%;
+      left: 0;
+    }
+    100% {
+      top: 42vh;
+      left: -22.75vw;
+    }
+  }
+
+  .box-three {
+    animation: box-three 0.9s forwards;
+    position: relative;
+  }
+
+  @keyframes box-three {
+    0%{
+      top: 0%;
+      left: 0;
+    }
+    100%{
+      top: 0;
+      left: -45.5vw;
+    }
+  }
+
+  .box-four {
+    animation: box-four 0.9s forwards;
+    position: relative;
+  }
+
+  @keyframes box-four {
+    0%{
+      top: 0%;
+      left: 0;
+    }
+    100%{
+      top: 0;
+      left: 22.75vw;
+    }
+  }
+
+  .box-five {
+    animation: box-five 0.9s forwards;
+    position: relative;
+  }
+
+  @keyframes box-five {
+    0%{
+      top: 0%;
+      left: 0;
+    }
+    100%{
+      top: -42vh;
+      left: 0;
+    }
+  }
+
+  .box-six {
+    animation: box-six 0.9s forwards;
+    position: relative;
+  }
+
+  @keyframes box-six {
+    0%{
+      top: 0%;
+      left: 0;
+    }
+    100% {
+      top: -42vh;
+      left: 0;
+    }
+  }
 
 .project-navbar {
   height: 100%;
@@ -349,7 +446,6 @@ h5 {
   height: 90%;
   width: 90%;
   border-radius: 1rem;
-  /* border: 1px solid #009dff; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -375,9 +471,9 @@ h5 {
   box-shadow: 0px 0px 15px #009dff;
 }
 
-/*  Contact Unit  */
+  /* Contact Unit   */
 .contact {
-  height: 60vh;
+  height: 65vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -472,15 +568,16 @@ h3 {
   font-size: 2rem;
 }
 
-/*  Footer unit  */
+  /* Footer unit   */
 
-/*  Footer Styling  */
+  /* Footer Styling   */
 .footer {
   background-color: #181818;
   color: #f1f1f1;
   padding: 40px 0;
   text-align: center;
   margin-top: 5vh;
+  height: 17vh;
 }
 
 .footer-container {
@@ -499,7 +596,7 @@ h3 {
 }
 
 .footer-left {
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   color: #f1f1f1;
 }
 
@@ -526,7 +623,7 @@ h3 {
 
 @media screen and (max-width: 768px) {
 
-  /* Main Container  */
+   /* Main Container   */
   html,
   body {
     overflow-x: hidden;
@@ -537,7 +634,7 @@ h3 {
     width: 100vw;
   }
 
-  /*  Home and Navigation Unit  */
+    /* Home and Navigation Unit   */
   .home {
     flex-direction: column;
     height: auto;
@@ -563,13 +660,13 @@ h3 {
     font-size: 1.2rem;
   }
 
-  /* Move Image Above Name  */
+   /* Move Image Above Name   */
   .img-site {
     order: -1;
     width: 100%;
     height: auto;
     display: flex;
-    /* justify-content: center;  */
+     /* justify-content: center;   */
   }
 
   .img-one {
@@ -580,7 +677,7 @@ h3 {
 
   .name {
     text-align: center;
-    /* margin-top: 5vh;  Adjust spacing  */
+     /* margin-top: 5vh;  Adjust spacing   */
   }
 
   h1 {
@@ -593,10 +690,10 @@ h3 {
   }
 
   .typing {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
   }
 
-  /* About Section  */
+   /* About Section   */
   .about {
     flex-direction: column;
     height: auto;
@@ -614,7 +711,7 @@ h3 {
   }
 
   .introduction {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
   }
 
   .skills {
@@ -622,10 +719,10 @@ h3 {
     margin-left: 0;
   }
 
-  /* Projects Section  */
+   /* Projects Section   */
   .project {
     height: auto;
-    /* align-items: center;  */
+     /* align-items: center;   */
   }
 
   .project-heading p {
@@ -650,7 +747,7 @@ h3 {
     height: 30vh;
   }
 
-  /* Contact Section  */
+   /* Contact Section   */
   .contact {
     height: auto;
     align-items: center;
@@ -679,10 +776,10 @@ h3 {
   }
 
   .info {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
   }
 
-  /* Footer  */
+   /* Footer   */
   .footer-container {
     flex-direction: column;
     text-align: center;
