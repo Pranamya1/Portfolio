@@ -234,7 +234,7 @@ span {
 .js span,
 .react span {
   color: #f1f1f1;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   padding-bottom: 3px;
   cursor: default;
 }
@@ -292,6 +292,7 @@ h5 {
   font-size: 1.5rem;
   color: wheat;
   margin-top: 0%;
+  cursor: default;
 }
 
 .project-category {
@@ -465,6 +466,7 @@ h5 {
   color: white;
   font-size: 2rem;
   transition: box-shadow 0.3s ease-in-out;
+  cursor: default;
 }
 
 .project-navitem:hover {
