@@ -1,7 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
-
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 0px;
+}
  /* Styling Unit   */
  /* Body   */
 body {
@@ -39,7 +42,7 @@ body {
   position: absolute;
   object-fit: cover;
   z-index: -1;
-  opacity: 30%;
+  opacity: 40%;
 }
 
  /* Navigation Unit  */
@@ -71,7 +74,7 @@ body {
   align-items: center;
 }
 
-a {
+.navbar-a {
   color: rgb(202, 19, 202);
   text-decoration: none;
 }
@@ -88,13 +91,14 @@ h1 {
   background: linear-gradient(to right, #00FFFF, #9966FF, #A020F0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 2%;
+  margin-left: 10%;
 }
 
 h2 {
   font-size: 5rem;
   color: orange;
-  margin-left: 2%;
+  margin-left: 6%;
+  margin-top: 13%;
 }
 
 .typing {
@@ -104,6 +108,7 @@ h2 {
   background: linear-gradient(to right, #00FFFF, #9966FF, #A020F0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-left: 6%;
 }
 
  /* Home (img) Unit  */
@@ -137,10 +142,10 @@ h2 {
 
   /* About (img) Unit   */
 .img-two {
-  height: 80%;
-  width: 80%;
+  height: 70%;
+  width: 70%;
   background-color: #009dff;
-  margin-top: 15%;
+  margin-top: 25%;
   margin-left: 10%;
   border-radius: 0.9rem;
   overflow: hidden;
@@ -167,21 +172,22 @@ h2 {
   font-size: 2rem;
   color: #f1f1f1;
   margin-left: 10%;
-  line-height: 0.9;
-  text-align: left;
   max-width: 800px;
-  margin-top: -1vh;
   cursor: default;
+  text-align: left;
+  line-height: 1.4; /* Improved spacing */
+  margin-top: 2vh; /* Adjusted margin */
 }
 
-span {
+.introduction span {
   color: #ff8c00;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.2rem; /* Slightly larger for emphasis */
 }
 
 .introduction br {
-  margin-bottom: 1rem;
+  display: block;
+  margin-bottom: 1rem; /* Balanced spacing */
 }
 
  /* About (skills) Unit   */
@@ -502,125 +508,194 @@ h5 {
   justify-content: center;
 }
 
+/* Heading Styling */
 h3 {
-  margin-top: 4%;
-  margin-bottom: -1%;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+  font-size: 2.5rem;
+  color: #ff8c00;
+  text-align: center;
 }
 
+/* Contact Section */
 .contact-container {
-  height: 90%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: #f1f1f1;
   align-items: center;
+  color: #f1f1f1;
+  padding-bottom: 5vh;
 }
 
+/* Contact Info */
 .contact-info {
-  height: 91%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Heading Styling */
+h3 {
+  margin-top: 10vh;
+  margin-bottom: 2vh;
+  font-size: 4vh;
+  color: #ff8c00;
+  text-align: center;
+}
+
+/* Contact Section */
+.contact-container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  color: #f1f1f1;
+  padding-bottom: 5vh;
 }
 
-.my-info {
-  height: 100%;
+/* Contact Info */
+.contact-info {
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  overflow: visible;
+}
+
+/* Contact Cards */
+.my-info {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 3vw;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+  overflow: visible;
+  margin-top: 5vh; /* Added margin on top */
 }
 
 .contact-info-card {
-  height: 35vh;
-  width: 30vw;
-  margin-top: 5vh;
-  margin-left: 20px;
-  border-radius: 10px;
+  width: 25vw;
+  height: 30vh;
+  background: rgba(0, 157, 255, 0.1);
+  border: 0.3vh solid #009dff;
+  border-radius: 2vh;
   display: flex;
   flex-direction: column;
-  border: 1px solid #009dff;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(1vh);
+  padding: 2vh;
+  will-change: transform;
 }
 
 .contact-info-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 15px #009dff;
+  transform: scale(1.05) translateZ(0);
+  box-shadow: 0 0 2vw #009dff;
+  z-index: 10;
 }
 
-
+/* Icon Styling */
 .logo-img {
-  height: 50%;
-  width: 100%;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo-img img {
-  max-height: 80%;
-  max-width: 80%;
+  max-height: 8vh;
+  max-width: 8vw;
+  filter: drop-shadow(0 0 1vw rgba(0, 157, 255, 0.5));
 }
 
-.info {
-  height: 50%;
+.logo-fit {
+  height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
+}
+
+/* Text Styling */
+.info {
+  font-size: 2.5vh;
+  color: #f1f1f1;
+  text-align: center;
+  margin-top: 1vh;
 }
 
   /* Footer unit   */
 
   /* Footer Styling   */
+/* Footer Styling */
 .footer {
   background-color: #181818;
   color: #f1f1f1;
-  padding: 40px 0;
+  padding: 4vh 0;
   text-align: center;
   margin-top: 5vh;
-  height: 17vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Footer Container */
 .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 80vw;
+  width: 100%;
   margin: 0 auto;
+  padding: 2vh 0;
 }
 
-.footer-left,
-.footer-right {
+/* Footer Left & Right */
+.footer-left, .footer-right {
   flex: 1;
-  padding: 10px;
+  padding: 2vh;
   min-width: 250px;
 }
 
-.footer-left {
-  font-size: 0.9rem;
-  color: #f1f1f1;
+/* Copyright Text */
+.copyright {
+  font-size: 2vh;
+  color: #aaa;
+  margin-top: 1vh;
+}
+
+/* Follow Me Heading */
+.footer-right h4 {
+  font-size: 2.5vh;
+  color: #009dff;
+  margin-bottom: 1vh;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icons a {
   display: inline-block;
-  margin: 5px;
+  margin: 1vh;
 }
 
 .social-icons img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s ease-in-out;
+  width: 4vh;
+  height: 4vh;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  filter: drop-shadow(0px 0px 5px #009dff);
 }
 
+/* Hover Effect */
 .social-icons img:hover {
   transform: scale(1.2);
-}
-
-.copyright {
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #aaa;
+  filter: drop-shadow(0px 0px 10px #009dff);
 }
 
 @media screen and (max-width: 768px) {
@@ -761,9 +836,14 @@ h3 {
     margin-top: 6vh;
   }
 
-  .my-info {
-    flex-direction: column;
-    align-items: center;
+  .contact-info-card {
+    width: 80%;
+    height: auto;
+    padding: 3vh;
+  }
+
+  .info {
+    font-size: 2.5vh;
   }
 
   .logo-img {
