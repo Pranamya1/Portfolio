@@ -107,6 +107,7 @@ gsap.from([".html", ".css", ".js", ".react"], {
     opacity: 0,
     scaleX: 0,
     transformOrigin: "left center",
+    stagger: 0.2,
     scrollTrigger: {
         trigger: ".about",
         scroller: "body",
