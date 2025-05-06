@@ -1,57 +1,74 @@
 //GSAP animation
 
 // GSAP Animation for Navbar
-gsap.to(".lap-first-navbar", {
-    scrollTrigger: {
-        trigger: ".home",
-        scroller: "body",
-        start: "top 0%",
-        end: "top -10%",
-        toggleActions: "play none none reverse",
-        scrub: 2,
-        onEnter: () => {
-            gsap.set(".lap-fis-navbar", { opacity: 1, x: 0, y: 0, pointerEvents: "auto" });
-        },
-        onLeaveBack: () => {
-            gsap.to(".lap-fis-navbar", {
-                opacity: 0,
-                y: -100,
-                pointerEvents: "none",
-            });
-        }
-    },
-    opacity: 0,
-    y: -100,
-    pointerEvents: "none"
-});
-
-gsap.fromTo(".lap-seco-navbar",
-    {
-        opacity: 0,
-        zIndex: 0,
-        cursor: "default",
-        pointerEvents: "none",
-        y: -100,
-    },
-    {
-        scrollTrigger: {
-            trigger: ".home",
-            scroller: "body",
-            start: "top 0%",
-            end: "top -10%",
-            toggleActions: "play none none reverse",
-            scrub: 2
-        },
-        y: 0,
+// Show/hide navbars on scroll
+if (window.innerWidth > 1024) {
+    gsap.fromTo(".lap-fis-navbar",
+      {
         opacity: 1,
-        zIndex: 0,
+        y: 0,
         pointerEvents: "auto"
-    }
-);
-
-  // slide bar
-  function mob_slidingNavbar() {
-    const slidebar = document.getElementById("mobSlidebar");
-    slidebar.classList.toggle("active");
+      },
+      {
+        scrollTrigger: {
+          trigger: ".home",
+          scroller: "body",
+          start: "top -5%",
+          end: "top -10%",
+          scrub: 2,
+          toggleActions: "play none none reverse"
+        },
+        opacity: 0,
+        y: -100,
+        pointerEvents: "none"
+      }
+    );
+  
+    gsap.fromTo(".lap-seco-navbar",
+      {
+        opacity: 0,
+        y: -100,
+        pointerEvents: "none"
+      },
+      {
+        scrollTrigger: {
+          trigger: ".home",
+          scroller: "body",
+          start: "top -5%",
+          end: "top -10%",
+          scrub: 2,
+          toggleActions: "play none none reverse"
+        },
+        opacity: 1,
+        y: 0,
+        pointerEvents: "auto"
+      }
+    );
   }
+  
 
+// Slide bar toggle function
+function mob_slidingNavbar() {
+    const slidebar = document.getElementById("mobSlidebar");
+    const body = document.body;
+  
+    // Toggle active class to show/hide slidebar
+    slidebar.classList.toggle("active");
+  
+    // Toggle body blur effect
+    body.classList.toggle("blur-background");
+  }
+  
+  // Close the slidebar when the user scrolls
+  window.addEventListener("scroll", function() {
+    const slidebar = document.getElementById("mobSlidebar");
+    const body = document.body;
+  
+    if (slidebar.classList.contains("active")) {
+      // Remove the active class and blur effect when scrolling
+      slidebar.classList.remove("active");
+      body.classList.remove("blur-background");
+    }
+  });
+  
+  
