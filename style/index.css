@@ -1,0 +1,325 @@
+/* =================================================================================== Base Style ================================================================================== */
+/* Scroll Bar Settings */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* General Body Styling */
+body {
+  background-color: #000;
+  overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Container Styling */
+.main-container {
+  height: 200vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home Section Styling */
+.home {
+  position: relative;
+  height: 100vh;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar-sec {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lap-fis-navbar {
+  height: 10%;
+  width: 90%;
+  background-color: aliceblue;
+  border-radius: 1rem;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  /* display: none; */
+}
+
+/* first section (name and logo section) of lap (big scr) first navbar */
+.fis-lap-nav-fis {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* navbar name */
+.fis-lap-nav-name {
+  font-size: 2.5rem;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+/* second section (navitem) of lap (big scr) first navbar */
+.fis-lap-nav-seco {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+/* navitem */
+.lap-fis-nav-navitem {
+  height: 50%;
+  width: 15%;
+  color: #009dff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 2vh;
+}
+
+/* third section (contact icons) of lap (big scr) first navbar */
+.fis-lap-nav-thi {
+  height: 100%;
+  width: 20%;
+  /* background-color: #92c8ea; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.lap-fis-nav-contitem {
+  color: #000000;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-left: 20%;
+}
+
+/* Second navbar for lap (big scr) */
+.lap-seco-navbar {
+  height: 10vh;
+  width: 60vw;
+  background-color: aliceblue;
+  margin-top: -2.4%;
+  margin-left: -40%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0 0 1rem 0;
+  overflow: hidden;
+}
+
+/* first section (navitem) of lap (big scr) second navbar */
+.seco-lap-nav-fis {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* navitems */
+.lap-seco-nav-navitem {
+  height: 50%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #009dff;
+}
+
+/* second section (contact icons) of lap (big scr) second navbar */
+.seco-lap-nav-seco {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact Icons */
+.lap-seco-nav-contitem {
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.33%;
+  height: 30%;
+  margin-left: 5%;
+}
+
+/* ========================== MEDIA QUERIES ========================== */
+
+/* For screens less than 425px (Mobile) */
+@media (max-width: 425px) {
+
+  .lap-fis-navbar,
+  .lap-seco-navbar {
+    display: none !important;
+  }
+
+  .mob-navbar {
+    height: 10vh;
+    width: 80%;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    z-index: 1;
+    position: fixed;
+  }
+
+  .mob-fis-sec {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .mob-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mob-nav-name {
+    font-size: 2rem;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    color: #000;
+  }
+
+  /* Section for the mobile menu icon */
+  .mob-seco-sec {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /* Styling for the hamburger icon */
+  .mob-menu-icon {
+    font-size: 2rem;
+    margin-right: 5%;
+    cursor: pointer;
+  }
+
+  /* Styling for the contact icons inside the slidebar */
+  .mob-contact-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    color: aliceblue;
+  }
+
+  .mob-contact-icons a {
+    font-size: 2rem;
+    color: white;
+    /* Blue color for icons */
+    margin: 1rem 0;
+    transition: color 0.3s ease;
+  }
+
+  /* Hover effect for the contact icons */
+  .mob-contact-icons a:hover {
+    color: #fff;
+    /* White color on hover */
+  }
+
+  /* Optional: Add some space between icons */
+  .mob-contact-icons i {
+    margin-right: 8px;
+  }
+
+
+  /* Sliding Menu */
+  #mobSlidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* Initially off-screen */
+    height: 100vh;
+    width: 70vw;
+    /* Adjust width as needed */
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Dark background for slidebar */
+    transition: left 0.3s ease;
+    /* Transition on the 'left' property */
+  }
+
+  /* When the slidebar is active, it moves into the screen */
+  #mobSlidebar.active {
+    left: 0;
+    /* Slide-in from left */
+  }
+
+  /* Styling for slidebar links */
+  #mobSlidebar a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #009dff;
+    /* Blue color for the links */
+    margin: 1rem 0;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+  }
+
+  /* Hover effect for links */
+  #mobSlidebar a:hover {
+    color: #fff;
+    /* Change color to white when hovered */
+  }
+
+}
+
+/* For screens equal to or greater than 1024px (Laptop and above) */
+@media (min-width: 1024px) {
+
+  .mob-navbar,
+  #mobSlidebar {
+    display: none !important;
+  }
+
+  .lap-fis-navbar,
+  .lap-seco-navbar {
+    display: flex;
+  }
+}
