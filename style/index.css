@@ -197,6 +197,7 @@ body {
     flex-direction: row;
     overflow: hidden;
     z-index: 1;
+    position: fixed;
   }
 
   .mob-fis-sec {
